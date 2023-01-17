@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="container">
+    <form (ngSubmit)="onUpload()">
+        <div class=" file">
+            <label>Upload Photo Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="photo" (change)="onFileChanged1($event)">
+        </div>
+        <br>
+        <div class="file">
+            <label>Upload Adharcard Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="adharcard" (change)="onFileChanged2($event)">
+        </div>
+        <br>
+        <div class="file">
+            <label>Upload Pancard Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="pancard" (change)="onFileChanged3($event)">
+        </div> <br>
+        <div class="file">
+            <label>Upload Salaryslip Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="salaryslip" (change)="onFileChanged4($event)">
+        </div> <br>
+        <div class="file">
+            <label>Upload Bankstatement Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="bankstatement" (change)="onFileChanged5($event)">
+        </div> <br>
+        <div class="file">
+            <label>Upload Addressproof Here</label><br>
+            <span class="material-icons">
+                input
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" name="addressproof" (change)="onFileChanged6($event)">
+        </div><br><br>
+        <div class="btn">
+            <button type="submit" value="upload" mat-raised-button color="primary">upload</button>
+        </div>
+    </form>
+</div>

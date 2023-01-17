@@ -1,0 +1,55 @@
+.example-container {
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.drawer {
+    padding-top: 30px;
+    text-align: center;
+    width: 25%;
+    border: 1px solid #555;
+    background-color: #DCE2F0;
+    color: rgb(13, 12, 12);
+}
+
+.main {
+    border: 2px solid #555;
+    background-color: #50586C;
+    padding: 10px;
+    color: aliceblue;
+    min-height: 100vh;
+}
+
+table{
+    width: 100%; 
+    margin-top: 50px;
+}
+
+th{
+    color: rgb(253, 253, 253);
+    border: 2px solid rgb(202, 192, 192);  
+}
+
+tr{
+    color: rgb(19, 18, 18);
+    text-align: center;
+}
+
+td{
+    width: 300px;
+    background-color: rgb(189, 189, 182);
+}
+
+.mainTable{
+    text-align: center;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+h1{
+    font-family: coldiac;
+}

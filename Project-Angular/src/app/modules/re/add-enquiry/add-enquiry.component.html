@@ -1,0 +1,69 @@
+<div>
+    <form [formGroup]="reactiveForm" (ngSubmit)="saveEnquiry(this.enq)">
+        <p>
+            <mat-form-field appearance="outline" color="ThemePalette">
+                <mat-label><b>Customer Name</b></mat-label>
+                <input [(ngModel)]="enq.customerName" matInput="text" name="customername"
+                        placeholder="Enter Customer Name" formControlName="customername">
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf="reactiveForm.get('customername').hasError('required')">This field is
+                    required</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label><b>Pancard</b></mat-label>
+                <input [(ngModel)]="enq.pancardNumber" matInput="text" name="pancard"
+                        placeholder="Enter pan number" formControlName="pancard">
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf="reactiveForm.get('pancard').hasError('required')">This field is
+                    required</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label><b>Mobile Number</b></mat-label>
+                <input [(ngModel)]="enq.customerMobileNumber" type="number" matInput="Mobile" name="mobilenumber"
+                        placeholder=" Enter mobile number" formControlName="mobilenumber">
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf="reactiveForm.get('mobilenumber').hasError('required')">This field is
+                    required</mat-error>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label><b>Email Address</b></mat-label>
+                <input [(ngModel)]="enq.customerEmailId" matInput="Email" name="email"
+                        placeholder="Enter email" formControlName="email">
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf="reactiveForm.get('email').hasError('required')">This field is
+                    required</mat-error>
+                <mat-error *ngIf="reactiveForm.get('email').hasError('email')">This field must contain valid email
+                </mat-error>
+
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label><b>Age</b></mat-label>
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <input [(ngModel)]="enq.age" matInput="Number" type="number" class="inp" name="age" formControlName="age"
+                    placeholder="Enter age">
+                <mat-error *ngIf="reactiveForm.get('age').hasError('required')">This field is
+                    required</mat-error>
+
+            </mat-form-field>
+        </p>
+        <p>
+            <!--  <mat-form-field appearance="fill">
+                <mat-label><b>Status</b></mat-label>
+                <mat-icon matSuffix color="primary">sentiment_very_satisfied</mat-icon>
+                <mat-select>
+                    <mat-option value="one" formControlName="1">Rejected</mat-option>
+                    <mat-option value="two" formControlName="2"></mat-option>
+                </mat-select>
+            </mat-form-field> -->
+        </p>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</div>

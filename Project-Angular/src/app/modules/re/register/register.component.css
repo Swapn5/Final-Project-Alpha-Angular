@@ -1,0 +1,17 @@
+
+
+.container {
+    background: #ffffff;
+    display: grid;
+    margin-bottom: 50px;   
+}
+
+.set {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 150px;
+}
+
+input {
+    color: rgb(10, 10, 10);
+  }

@@ -1,0 +1,41 @@
+<div class="mainTabel">
+    <table>
+        <thead>
+
+            <tr class="trow">
+                <th class="thead">Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email Id</th>
+                <th>Enquiry Status</th>
+                <th>Action</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody *ngFor="let e of enq">
+            <tr>
+                <td>{{e.custId}}</td>
+                <td>{{e.customerName}}</td>
+                <td>{{e.age}}</td>
+                <td>{{e.customerEmailId}}</td>
+                <td>{{e.enquiryStatus}}</td>
+                <td>
+                    <a mat-raised-button color="primary" (click)="deleteEnquiry(e.custId)"><mat-icon class="icon">delete</mat-icon></a>
+                </td>              
+                <td>                    
+                    <ng-container [ngSwitch]="e.enquiryStatus">
+                        <button *ngSwitchCase="'pending'" mat-raised-button style="background-color: rgb(255, 225, 0);">Pending</button>
+                        <button *ngSwitchCase="'eligible'" mat-raised-button style="background-color: orange;">Eligible</button>
+                        <button *ngSwitchCase="'verified'" mat-raised-button style="background-color: green;" (click)="navigateToRegister(e.custId)">Register</button>
+                        <button *ngSwitchCase="'registerd'" mat-raised-button style="background-color: rgb(90, 154, 90);" disabled="true">Registered</button>
+                        <button *ngSwitchCase="'low cibil'" mat-raised-button style="background-color: rgb(190, 96, 96);">Low cibil</button>
+                        <button *ngSwitchCase="'rejected'" mat-raised-button color="warn" disabled="true">Rejected</button>
+                    </ng-container>
+                </td>
+
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

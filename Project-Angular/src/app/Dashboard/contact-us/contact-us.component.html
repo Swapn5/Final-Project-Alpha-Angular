@@ -1,0 +1,99 @@
+<div class="App">
+  
+    <div class="content">
+   
+   <div class="check">
+   <h1 style="color: rgb(236, 153, 0);">    </h1><br>
+   <img src="assets/img.jpg" style="float:left;margin-right:6px;">
+    </div>
+    
+     <form action="a" class="form-contact" method="post">
+      <!--class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">-->
+     <h2 style="color: rgb(236, 153, 0);">SEND  MESSAGE</h2>
+     <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+     
+
+     <input  id="name" type="text" placeholder="name" />
+     <input id="email"  type="text" placeholder="email" />
+     <textarea id="comment" type="text" placeholder="How We Can Help You ?"></textarea>
+
+      <!--- <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+       <input name="email" type="text" class="feedback-input" placeholder="Email" />
+       <textarea name="Message" class="feedback-input" placeholder="How We Can Help You ?"></textarea>-->
+       <button id="submit">Submit</button>
+     </form>
+    
+   
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    -->
+   </div>
+   
+   
+   <script>
+    
+    const name=document.getElementById('name');
+ 
+  const email=document.getElementById('email'); 
+ 
+  const comment=document.getElementById('comment');
+
+  const submit=document.getElementsByClassName('form-contact')[0];
+
+  
+  submit.addEventListener('submit',(e)=>
+ {
+  e.preventDefault();
+  console.log("clicked");
+
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "snehamore9115@gmail.com",
+    Password : "wkbzgurpfuceqdvo",
+    To : 'snehamore9115@gmail.com',
+    From : email,
+   
+    Body :"hello"
+}).then(
+  message => alert(message)
+);
+
+ })
+
+    </script>
+   
+   <!------ Include the above in your HEAD tag ---------->
+  
+   <div class="container">
+  
+   <h1 style="color: brown;"></h1><br>&nbsp;&nbsp;&nbsp;
+   <div class="row text-center">
+       
+ 
+  <div class="col-sm-3 col-xs-6 first-box">  
+   <h1><span class="glyphicon glyphicon-earphone" style="color: rgb(185, 220, 47);"></span></h1>
+   <h3 style="color:  rgb(236, 153, 0);">Phone</h3>
+   <p class="p" style="font-size: x-large;">1800-132-6665</p><br>
+   </div>
+           <div class="col-sm-3 col-xs-6 second-box">
+               <h1><span class="glyphicon glyphicon-home" style="color: rgb(185, 220, 47);"></span></h1>
+               <h3 style="color:  rgb(236, 153, 0) ;">Location</h3>
+               <p class="p" style="font-size: x-large;">Near Akurdi Railway Station,Pcmc</p><br>
+           </div>
+           <div class="col-sm-3 col-xs-6 third-box">
+               <h1><span class="glyphicon glyphicon-send" style="color: rgb(185, 220, 47);"></span></h1>
+               <h3 style="color:  rgb(236, 153, 0)">E-mail</h3>
+               <p class="p" style="font-size: x-large;">AlphaFinance@gmail.com</p><br>
+           </div>
+           <div class="col-sm-3 col-xs-6 fourth-box">
+            <h1><span class="glyphicon glyphicon-leaf" style="color: rgb(185, 220, 47);"></span></h1>
+            <h3 style="color:  rgb(236, 153, 0);">Web</h3>
+            <p class="p" style="font-size: x-large;">www.alphafinance.com</p><br>
+           </div>
+         </div>
+       </div>
+     </div>
+       
+      

@@ -1,0 +1,106 @@
+<div class="mainTabel">
+    <h1><b>APPLICATIONS</b></h1>
+    <table>
+        <thead>
+            <tr class="trow">
+                <th class="thead">Customer Id</th>
+                <th>Customer Name</th>
+                <th>Email Id</th>
+                <th>Mobile Number</th>
+                <th>Status</th>
+                <th>Verify Documents</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of customer">
+                <td>{{c.cid}}</td>
+                <td>{{c.cname}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.mobile}}</td>
+                <td>{{c.loan.lstatus}}</td>
+                <td>
+                    <button (click)="getdocs(c.cid)" (click)="m1(c.loan.lstatus)" mat-raised-button color="primary">Get Documents</button>                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+<div>
+
+    <div *ngIf="docs.cid!=0" class="container">
+        <h1 style="text-align: center;">Documents of Application Id-{{docs.cid}}</h1>
+        <mat-card>
+                <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+                    <mat-horizontal-stepper [linear]="false" #stepper animationDuration="2000">
+
+                        <mat-step label="Pancard">
+
+                            <ng-template matStepLabel>Adhar Card</ng-template>
+                            <img [src]="'data:image/jpg;base64,'+docs.adharCard" height="200">
+                            <div class="example-button-row">
+                                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                            </div>
+
+                        </mat-step>
+
+
+                        <mat-step label="Address Proof">
+
+                            <ng-template matStepLabel>Pan Card</ng-template>
+
+                            <img [src]="'data:image/jpg;base64,'+ docs.panCard" height="200">
+
+                            <div>
+                                <button mat-raised-button matStepperPrevious>Back</button>
+                                &nbsp;&nbsp;
+                                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                            </div>
+
+                        </mat-step>
+
+                        <mat-step label="Salary Slips">
+
+                            <ng-template matStepLabel>Address Proof</ng-template>
+                            <img [src]="'data:image/jpg;base64,'+ docs.addressProof" height="200">
+                            <div>
+                                <button mat-raised-button matStepperPrevious>Back</button>
+                                &nbsp;&nbsp;
+                                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                            </div>
+                        </mat-step>
+
+                        <mat-step label="Bank statement">
+
+                            <ng-template matStepLabel>Salary Slip</ng-template>
+                            <img [src]="'data:image/jpg;base64,'+ docs.salarySlips" height="200">
+
+
+                            <div>
+                                <button mat-raised-button matStepperPrevious>Back</button>
+                                &nbsp;&nbsp;
+                                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                            </div>
+                        </mat-step>
+
+                        <mat-step label="Adhar card">
+
+                            <ng-template matStepLabel>Bank Statement</ng-template>
+                            <img [src]="'data:image/jpg;base64,'+ docs.bankStatement" height="200">
+                            <div>
+                                <ng-template matStepLabel>Done</ng-template>
+                                You are now done.
+                                <div>
+                                    <button mat-raised-button matStepperPrevious>Back</button>
+                                    &nbsp;&nbsp;
+                                    <button *ngIf="docs.cid!=0" (click)="reject(docs.cid)" mat-raised-button color="warn" data-bs-toggle="modal" data-bs-target="#exampleModal">Failed</button>
+                                    &nbsp;&nbsp;    
+                                    <button *ngIf="docs.cid!=0 && flag" (click)="changeLoanStatus(docs.cid)" mat-raised-button color="primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Verified</button>
+                                </div>
+                            </div>
+                        </mat-step>
+
+                    </mat-horizontal-stepper>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>

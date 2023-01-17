@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+body { background:rgb(59, 59, 223); }
+form { 
+    max-width:420px; 
+    margin-left: 700px;
+    margin-right: 25px;
+    }
+
+img{
+    height: 300px;
+    margin-left: 25px;
+}
+
+.feedback-input {
+  background-color: rgba(rgb(243, 177, 177), .8);
+  color:rgb(254, 169, 169);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 8px;
+  line-height: 22px;
+  background: hwb(223 82% 13%) ;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 20px;
+  margin-bottom: 20px;
+  width:100%;
+
+  box-sizing: border-box;
+  outline:0;
+}
+.check.h1
+{
+  font-size: larger;
+}
+.App.content.check.h1{
+    font-size: 20px;
+}
+#submit 
+{
+  background-color: rgba(rgb(243, 177, 177), .8);
+  color:rgb(254, 169, 169);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 8px;
+  line-height: 22px;
+  background: hwb(223 82% 13%) ;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 20px;
+  margin-bottom: 20px;
+  width:100%;
+
+  box-sizing: border-box;
+  outline:0;
+
+}
+#name
+{
+  background-color: rgba(rgb(243, 177, 177), .8);
+  color:rgb(254, 169, 169);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 8px;
+  line-height: 22px;
+  background: hwb(223 82% 13%) ;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 20px;
+  margin-bottom: 20px;
+  width:100%;
+
+  box-sizing: border-box;
+  outline:0;
+
+
+}
+#email
+{
+  
+  background-color: rgba(rgb(243, 177, 177), .8);
+  color:rgb(254, 169, 169);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 8px;
+  line-height: 22px;
+  background: hwb(223 82% 13%) ;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 20px;
+  margin-bottom: 20px;
+  width:100%;
+
+  box-sizing: border-box;
+  outline:0;
+
+
+}
+#comment
+{
+
+
+  background-color: rgba(rgb(243, 177, 177), .8);
+  color:rgb(254, 169, 169);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 8px;
+  line-height: 22px;
+  
+  background: hwb(223 82% 13%) ;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding:40px;
+  margin-bottom: 20px;
+  width:100%;
+
+  box-sizing: border-box;
+  outline:0;
+
+
+
+}
+
+.container 
+{
+  padding-top: 25px;
+  text-align: center;
+}
+/*.co
+{font-size: 25px;
+}*/
+.App
+{   /*rgb(28, 34, 35);*/
+  background-color: rgb(58, 61, 61);
+}
+.p
+{
+color: rgb(254, 111, 111);
+}
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+
+[type="submit"]:hover { background:#CC4949; }

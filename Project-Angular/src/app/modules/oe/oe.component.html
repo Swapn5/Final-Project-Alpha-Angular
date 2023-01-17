@@ -1,0 +1,15 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="drawer">
+        <div>
+            <img src="assets\adminlogo.png">
+            <h1><b>Operation Executive</b></h1>
+        </div>
+
+        <div class="sub_container">
+            <button mat-raised-button color="primary" routerLinkActive="active" routerLink="viewen">View Enquiry</button>
+        </div>
+    </mat-drawer>
+
+    <mat-drawer-content class="main"><router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,241 @@
+.s {
+    padding-bottom: 25px;
+
+}
+
+.nav {
+    padding: 20px;
+
+}
+
+.fonts {
+    padding-bottom: 50px;
+
+}
+
+.a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(221, 235, 226), rgb(202, 221, 208));
+
+}
+
+
+
+.active {
+
+    background-image: linear-gradient(160deg, #f8ba97 0%, #f5f0ef 100%);
+
+    border-radius: 10px;
+}
+
+.mainbtn {
+    font-size: 50px;
+    background-color: #C7DAD4;
+    padding-right: 300px;
+    padding-bottom: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.abc {
+    display: block;
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.a:hover {
+
+    border-radius: 10px;
+    background-color: transparent;
+    background-image: linear-gradient(160deg, #afb4b6 0%, #a8cfcb 100%);
+
+
+}
+
+
+.a:hover::after {
+    background-color: #ec00d9;
+    border-radius: 65px;
+
+}
+
+
+html {
+    /* background-image: linear-gradient(to right, #C8E3F6, #F0F5FB);*/
+    margin-top: -1rem;
+    margin: -1rem;
+    padding: 50px;
+    height: 100%;
+    background-image: url('src\assets\Car-Loan-Application-IndusInd-Bank.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: fit-content;
+
+}
+
+/*  animation: changeBg 5s infinite alternate linear;
+
+}
+
+@keyframes changeBg {
+    0% {
+        background: #dce7a8;
+    }
+
+    25% {
+        background: #985ea3;
+    }
+
+    50% {
+        background: #86c6d6;
+    }
+
+    75% {
+        background: #5981ec;
+    }
+
+    100% {
+        background: #7fdd49;
+    }
+}
+
+*/
+
+.b {
+    background-image: linear-gradient(to right, #C8E3F6, #F0F5FB);
+    padding-top: 29px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(-45deg, #e7db2b, #eaf54f, #ffc525, rgb(247, 200, 72), #dfdc39);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 80s ease-in-out infinite;
+    -moz-animation: animated_text 16s ease-in-out infinite;
+    -webkit-animation: animated_text 6s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+    0% {
+        background-position: 200px 500%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 200px 90%;
+    }
+}
+
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent;
+    width: 9rem;
+    height: auto;
+    right: -1000px;
+    top: -15px;
+
+}
+
+button .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    background-image: linear-gradient(to right, #f7814b 0%, #f0613e 51%, #fa5959 100%);
+    border-radius: 1.625rem;
+
+}
+
+button .arrow_icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.225rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+
+}
+
+button .arrow_icon::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button .button_text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    inset: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: rgb(23, 23, 24);
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    line-height: 0.7;
+    letter-spacing: 1.2px;
+
+    font: bold;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .arrow_icon {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+.photo {
+    border-radius: 25px;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    left: 200px;
+    top: -30px;
+
+}
+
+body {
+
+    width: fit-content;
+    height: fit-content;
+    border-radius: 750px;
+    padding-bottom: 30px;
+    margin-left: 23%;
+}

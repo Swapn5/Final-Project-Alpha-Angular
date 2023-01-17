@@ -1,0 +1,50 @@
+<div class="mainTabel">
+    <table>
+        <thead>
+            <tr class="trow">
+                <th class="thead">Customer Id</th>
+                <th>Customer Name</th>
+                <th>Email Id</th>
+                <th>Pancard</th>
+                <th>Mobile Number</th>
+                <th>Age</th>
+                <th>Enquiry Status</th>
+                <th>Action</th>
+                <th>Cibil</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor="let e of enquiry">
+            <tr>
+                <td>{{e.custId}}</td>
+                <td>{{e.customerName}}</td>
+                <td>{{e.customerEmailId}}</td>
+                <td>{{e.pancardNumber}}</td>
+                <td>{{e.customerMobileNumber}}</td>
+                <td>{{e.age}}</td>
+                <td>{{e.enquiryStatus}}</td>
+
+                <td>
+                    <ng-container [ngSwitch]="e.enquiryStatus">
+                        <button *ngSwitchCase="'pending'" mat-raised-button style="background-color: rgb(255, 225, 0)">{{e.enquiryStatus}}</button>
+                        <button *ngSwitchCase="'eligible'" mat-raised-button style="background-color: rgb(82, 144, 82);" (click)="onclick(e.custId)">Verify</button>
+                        <button *ngSwitchCase="'verified'" mat-raised-button style="background-color: green;" disabled="true">Verified</button>
+                        <button *ngSwitchCase="'registerd'" mat-raised-button style="background-color: green;" disabled="true">Registered</button>
+                        <button *ngSwitchCase="'low cibil'" mat-raised-button color="warn" (click)="reject(e.custId)">Rejection Mail</button>
+                        <button *ngSwitchCase="'rejected'" mat-raised-button color="warn" disabled="true">{{e.enquiryStatus}}</button>
+                    </ng-container>
+                </td>
+                
+                <div *ngIf="e.cibil == null; then thenblock; else elseblock"></div>
+
+                 <ng-template #thenblock>
+                    <td><button mat-raised-button (click)="getCibil(e.custId)" style="background-color:rgb(20, 112, 133);">get cibil</button></td>
+                </ng-template>
+
+                <ng-template #elseblock>
+                    <td>{{e.cibil}}</td>
+                </ng-template>
+            </tr>
+        </tbody>
+    </table>
+</div>

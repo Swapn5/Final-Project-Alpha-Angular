@@ -1,0 +1,63 @@
+
+<div class="container">
+   <h1 style="text-align: center;">Sanction Letter</h1>
+        <mat-card>
+            <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+            
+                <form [formGroup]="reactiveForm">
+                    <ng-template matStepLabel>Sanction Letter</ng-template>
+
+                    <mat-form-field>
+                    <input matInput type="text" class="form-control" [(ngModel)]="customer.loan.sanctionId" placeholder="Sanction Id" formControlName="sanctionId">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input matInput type="text" class="form-control" [(ngModel)]="customer.loan.bankName" placeholder="Bank Name" formControlName="bankName">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input matInput type="text" class="form-control" [(ngModel)]="customer.loan.accNo" placeholder="Account Number" formControlName="accNo">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input matInput type="text" class="form-control" [(ngModel)]="customer.loan.expTenure" placeholder="Tenure (Month)" formControlName="expTenure">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input matInput type="text"  class="form-control" [(ngModel)]="customer.loan.expAmount" placeholder="Customer Total Loan Required " formControlName="expAmount">
+                    </mat-form-field><br>     
+                    <mat-form-field>
+                    <input matInput type="text"  class="form-control" [(ngModel)]="customer.loan.sanctionAmount" placeholder="Sanction Amount" formControlName="sanctionAmount">
+                    </mat-form-field><br>
+                    <mat-form-field>
+                    <input matInput type="text"  class="form-control" [(ngModel)]="customer.loan.rateOfInt" placeholder="Rate Of Interest(%)" formControlName="rateOfInt">
+                    </mat-form-field><br>
+                
+
+                    <div>
+                        <button *ngIf="customer.cid !=0" mat-raised-button color="primary" type="submit" class="btn btn-success" (click)="sanction(customer)">Submit</button>
+                    </div>
+                
+                </form>
+
+            </mat-card-content>
+        </mat-card> 
+</div>
+<!--
+<div>
+    <form [formGroup]="reactiveForm" (ngSubmit)="sanction(customer)">
+        <div class="container">
+            <label>Sanction Id :{{customer.loan.sanctionId}}</label><br><br>
+            <label>Expected Loan Amount :{{customer.loan.expAmount}}</label><br><br>
+            <label>Tenure :{{customer.loan.expTenure}}</label><br><br>
+            <label>Bank Name :{{customer.loan.bankName}}</label><br><br>
+            <label>Account Number :{{customer.loan.accNo}}</label><br><br>
+            <label>Sanctioned Amount :
+                <input type="number" [(ngModel)]="customer.loan.sanctionAmount" formControlName="sanctionAmount">
+            </label><br><br>
+            <label>Interest Rate :
+                <input type="number" [(ngModel)]="customer.loan.rateOfInt" formControlName="rateOfInt">
+            </label><br><br>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>-->
+
+
+

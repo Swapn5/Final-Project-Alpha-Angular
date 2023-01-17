@@ -1,0 +1,58 @@
+<html>
+
+<div class="container">
+    <div>
+        <img src="\assets\b.png" class="photo">
+    </div>
+
+
+
+    <div class="s">
+        <a class="name">
+            <h1 class="b">Alpha Vehicle Loan</h1>
+        </a>
+
+    </div>
+
+
+
+    <!--<div class="login" style="text-align: right">
+
+
+    <button class="loginbtn" routerLink="Login">SignIN</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</div> -->
+    <div>
+        <button (click)="onclick()">
+            <span class="circle" aria-hidden="true">
+                <span class="arrow_icon"></span>
+            </span>
+            <span class="button_text" routerLink="login"><b>Login</b></span>
+        </button>
+    </div>
+</div>
+
+<div style="text-align: center;" class="nav">
+
+
+    <nav class="fonts">
+        <a class="a" style="color: black;" routerLink="home" routerLinkActive="active"><b>Home</b></a>
+        &nbsp;&nbsp;&nbsp;
+
+        <a class="a" style="color: rgb(12, 6, 6);" routerLink="emi" routerLinkActive="active"><b>EMI
+                Calculator</b></a>&nbsp;&nbsp;&nbsp;
+
+        <a class="a" style="color: black;" routerLink="aboutus"
+            routerLinkActive="active"><b>About-Us</b></a>&nbsp;&nbsp;&nbsp;
+
+        <a class="a" style="color: black;" routerLink="faq" routerLinkActive="active"><b>FAQ</b></a>&nbsp;&nbsp;&nbsp;
+
+        <a class="a" style="color: black;" routerLink="contactus"
+            routerLinkActive="active"><b>Contact-Us</b></a>&nbsp;&nbsp;&nbsp;
+
+    </nav>
+    <router-outlet></router-outlet>
+</div>
+
+</html>

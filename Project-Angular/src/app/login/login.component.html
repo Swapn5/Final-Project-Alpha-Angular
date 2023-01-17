@@ -1,0 +1,52 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="sidenav">
+
+
+    <div class="login-main-text">
+
+
+        <div class="container">
+            <h3 class="neonText">
+                Alpha Vehicle Loan <br>
+                <h3>Login Page</h3>
+            </h3>
+            <p class="neonText">Login from here to access.</p>
+
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="b">
+        <button (click)="navigateToHome()" class="btn">
+            <b>Back</b>
+        </button>
+    </div>
+    <div class="col-md-6 col-sm-12">
+
+        <div class="login-form">
+
+            <div class="form-group">
+                <label class="text"><b>User Id</b></label>
+                <input type="text" [(ngModel)]="emp.eid" class="form-control" id="id" placeholder="User Name">
+            </div>
+            <div class="form-group">
+                
+                <label class="text"><b>Password</b></label>
+                <input  type="password" [(ngModel)]="emp.password" class="form-control"  placeholder="Password">
+                
+            </div>
+            <div>
+                
+                <button class="btn btn-black" (click)="mainLogin(emp.eid,emp.password)">Login</button>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,11 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="btn">
+    <button mat-mini-fab color="warn" (click)="navigateToHome()" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button mat-raised-button color="warn" (click)="navigateToLogin()">
+        <span class="material-icons">logout</span>
+    </button>
+</div>
+<router-outlet></router-outlet>

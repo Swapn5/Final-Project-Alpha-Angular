@@ -1,0 +1,190 @@
+<div class="check">
+    <!--<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+      {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+      </button>-->
+      <h1></h1>
+    
+      <mat-stepper orientation="vertical" [linear]="isLinear" #stepper >
+        
+        
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel><b>Can I get 100% funding to buy a car?</b></ng-template>
+             <p>The maximum amount of loan that you can avail to buy a car will vary from lender to
+                lender. Most banks offer financing up to 90% of the on-road price of the car but there are some
+                                    banks such as HDFC Bank, etc., that offers financing for up to 100% of the car's on-road
+                                       price.</p> 
+          </form>
+        </mat-step>
+        
+        <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel><b>Can I pre-pay the entire loan amount? What are the conditions involved?</b></ng-template>
+          <p>  Yes, you can prepay the entire car loan and save on vital interest payments in the
+                                    future. However, most banks will allow the pre-payment option after you have chalked off
+                                    6 months on your loan tenure. Plus, you will be expected to pay a
+                                    small fee as pre-payment penalty that will be dependent on the leftover loan amount.</p>
+           
+          
+          </form>
+        </mat-step>
+    
+        
+        <mat-step [stepControl]="thirdFormGroup">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel><b>What car models are financed by the
+                standard car loan in India?</b></ng-template>
+            <p> Unless otherwise specified, almost all small to medium sized cars, Commercial Vehicle
+                Loan, Sports Utility Vehicles (SUV), and Multi Utility Vehicles (MUV) come under the
+                purview of car loans available in India.
+                However, as mentioned, refer to the loan brochure for exceptions to this rule.</p>
+             
+             
+            </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="forthFormGroup">
+            <form [formGroup]="forthFormGroup">
+              <ng-template matStepLabel><b>When applying for the car loan, do I
+                need a guarantor/ security?</b></ng-template>
+            <p>Almost all car loan products available in India are secured loans, with the procured
+                vehicle itself acting as the customary security. Most lenders in India will not insist
+                upon any guarantors; however,
+                if your annual income does not match up to the expected requirement, then you may be
+                expected to sign-up a co-applicant and/or guarantor.</p>
+             
+       </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="fifthFormGroup">
+            <form [formGroup]="fifthFormGroup">
+              <ng-template matStepLabel><b>What are the commonly available car
+                loan repayment tenures?</b></ng-template>
+            <p>Repayment tenures usually range from 12 months to 84 months (1-7 years).</p>
+             
+              
+            </form>
+          </mat-step>
+    
+          <mat-step [stepControl]="sixFormGroup">
+            <form [formGroup]="sixFormGroup">
+              <ng-template matStepLabel><b>What kind of a credit score do you
+                need to buy a car?</b></ng-template>
+            <p>Just like with most loans, a high credit score above 750 is ideal. But you can still
+                apply for a loan
+                if your credit score is above 600. Remember, if your score is too low, your application
+                may be rejected.</p>
+             
+              
+            </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="sevenFormGroup">
+            <form [formGroup]="sevenFormGroup">
+              <ng-template matStepLabel><b>Can I get 100% funding to buy a car?</b></ng-template>
+            <p> The maximum amount of loan that you can avail to buy a car will vary from lender to
+                lender.
+                Most banks offer financing up to 90% of the on-road price of the car but there are some
+                banks such as HDFC Bank, etc.,
+                that offers financing for up to 100% of the car's on-road price.</p>
+          </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="eightFormGroup">
+            <form [formGroup]="eightFormGroup">
+              <ng-template matStepLabel><b>What is the minimum credit score I need to get a car loan?</b></ng-template>
+            <p> When you apply for a car loan, lenders will look for a credit score of at least 750.
+                Below this score, lenders may be reluctant to lend to you as it indicates your low
+                repayment capacity.
+                Some banks may offer you a car loan despite your low credit score but they may charge a
+                higher interest rate.</p>
+            </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="nineFormGroup">
+            <form [formGroup]="nineFormGroup">
+              <ng-template matStepLabel><b>Should I take a car loan from the car dealership or bank?</b></ng-template>
+            <p>Before you apply for any car loan, ensure that you explore all the options available.
+                Once you explore, you will get an idea about the benefits offered by various lenders on
+                their car loans. Compare the benefits offered and pick a lender that fits your
+                requirements.Whether it is a bank or a car dealership, pick the one that offers better interest
+                rates.
+          </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="tenFormGroup">
+            <form [formGroup]="tenFormGroup">
+              <ng-template matStepLabel><b>Do banks offer finance for used cars?</b></ng-template>
+            <p> Yes. Many top lenders such as SBI, HDFC Bank, etc., offer loans to buy used cars.
+                These lenders offer car loans for up to 85% of the car's value provided that the car is
+                not more than 5 years old.
+                Used car loans can be repaid in a maximum of 7 years.</p>
+          </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="elevenFormGroup">
+            <form [formGroup]="tenFormGroup">
+              <ng-template matStepLabel><b>What will lenders look for when I apply for a car loan?</b></ng-template>
+            <p>One of the most important factors that lenders consider before offering you a car loan is
+                your credit score.
+                As stated above, a credit score of above 750 can fetch you lower interest rates and
+                other benefits.
+                The other factors that lenders look for when you apply for a car loan are your
+                employment status,
+                residence and job stability, income, debt-to-income ratio, etc.</p>
+          </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="twelveFormGroup">
+            <form [formGroup]="tenFormGroup">
+              <ng-template matStepLabel><b>What is the lowest EMI that I need to pay for a car loan?</b></ng-template>
+            <p> The amount of EMI (equated monthly instalments) that you will be paying towards your car
+                loan will depend on the interest rate,
+                loan amount, and the repayment tenure you choose. You can calculate the EMI by using the
+                EMI Calculator tool available on the BankBazaar website.
+                For example, let us suppose that you avail a car loan of Rs.1 lakh at an interest rate
+                of 12% for a tenure of 5 years. Using the tool,
+                we calculated the EMI and found it to be Rs.2,224.</p>
+          </form>
+          </mat-step>
+    
+    
+    
+          <mat-step [stepControl]="thirteenFormGroup">
+            <form [formGroup]="thirteenFormGroup">
+              <ng-template matStepLabel><b>How much down payment do I need to make to buy a car?</b></ng-template>
+            <p> Making a higher down payment will mean that you will need to avail a lower loan amount to
+                buy a car.
+                When you avail a lower loan amount, there are chances that banks or lenders may offer
+                you a car loan at
+                lower interest rates. This is simply because if the loan amount is lower, the repayment
+                will be quicker.
+                So, though there is no hard and fast rule to how much down payment you should make, a
+                higher down payment
+                will ensure that your debt liability is lesser. </p>
+          </form>
+          </mat-step>
+    
+    
+          <mat-step [stepControl]="forteenFormGroup">
+            <form [formGroup]="forteenFormGroup">
+              <ng-template matStepLabel><b>Do banks offer finance for used cars?</b></ng-template>
+            <p>If your credit score is above 750, you can negotiate with the banks to offer you a car
+                loan at a lower interest rate.
+                Many lenders will let you negotiate on the interest rates since your high credit score
+                is an indication of your high repayment capacity.
+                Some lenders may also offer you a waiver on the processing fee if you have a good credit
+                score.</p>
+            </form>
+          </mat-step>
+        
+    </mat-stepper>
+    </div>

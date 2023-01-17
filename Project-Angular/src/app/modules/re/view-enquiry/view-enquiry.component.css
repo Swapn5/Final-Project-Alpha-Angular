@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+th {
+    color: rgb(253, 253, 253);
+    border: 2px solid rgb(202, 192, 192);
+}
+
+tr {
+    color: rgb(19, 18, 18);
+    text-align: center;
+}
+
+td {
+    width: 300px;
+    background-color: rgb(189, 189, 182);
+    height: 50px;
+}
+
+.mainTable {
+    text-align: center;
+}
+
+button{
+    width: 120px;
+    height: 35px;
+}
+
+.icon{
+    border-radius: 3px;
+}
+
+
+

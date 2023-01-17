@@ -1,0 +1,49 @@
+.example-container {
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.drawer {
+    padding-top: 30px;
+    text-align: center;
+    width: 25%;
+    border: 1px solid #555;
+    background-color: #DCE2F0;
+    color: black;
+}
+
+.main {
+    border: 2px solid #555;
+    background-color: #50586C;
+    text-align: center;
+    padding-top: 20px;
+    color: aliceblue;
+    min-height: 100vh;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+h1 {
+    font-family: coldiac;
+}
+
+button {
+    width: 150px;
+}
+
+button:hover {
+    transform: translate(40px 40px);
+    background-image: linear-gradient(#50586C, #5a86eb);
+}
+
+.active {
+    background-color: rgb(48, 163, 82);
+}
+
+.sub-container{
+    padding-top: 30px;
+}

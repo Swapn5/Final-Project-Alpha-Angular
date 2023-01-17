@@ -1,0 +1,18 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened class="drawer">
+        <div>
+            <img src="assets\adminlogo.png">
+            <h1><b>Account Head</b></h1>
+        </div>
+        <div class="sub-container">
+            <button mat-raised-button color="primary" routerLinkActive="active" routerLink="viewapp">Applications</button>
+            <br>
+            <br>
+            <button mat-raised-button color="primary" routerLinkActive="active" routerLink="sanction">Sanction</button>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content class="main">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

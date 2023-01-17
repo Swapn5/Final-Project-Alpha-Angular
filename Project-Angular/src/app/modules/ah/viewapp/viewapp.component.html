@@ -1,0 +1,25 @@
+<div class="mainTabel">
+    <h1><b>APPLICATIONS</b></h1>
+    <table>
+        <thead>
+            <tr class="trow">
+                <th class="thead">Customer Id</th>
+                <th>Customer Name</th>
+                <th>Email Id</th>
+                <th>Mobile Number</th>
+                <th>Status</th>
+                <th>Sanction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of customer">
+                <td>{{c.cid}}</td>
+                <td>{{c.cname}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.mobile}}</td>
+                <td>{{c.loan.lstatus}}</td>
+                <td><button  mat-raised-button style="background-color: rgb(18, 48, 154);" (click)="navigateToSanction(c)">Sanction</button></td>
+            </tr>
+        </tbody>
+    </table>
+<div>
